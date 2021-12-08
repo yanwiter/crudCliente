@@ -32,6 +32,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { DeleteClienteComponent } from './components/delete-cliente/delete-cliente.component';
 
 //export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -41,6 +42,7 @@ import { MatCardModule } from '@angular/material/card';
     LoginComponent,
     HomeComponent,
     ListClienteComponent,
+    DeleteClienteComponent,
   ],
   imports: [
     BrowserModule,
