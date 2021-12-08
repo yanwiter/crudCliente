@@ -27,3 +27,11 @@ body {
 .mat-form-field {
   width: 93%;
 }
+
+.delete {
+  color: red;
+}
+
+.edit {
+  color: #010B40;
+}
