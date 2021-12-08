@@ -14,18 +14,19 @@ export class ClienteService {
     return this.http.get<Cliente[]>(`${API_CONFIG.baseUrl}/cliente/findall`);
   }
 
+  findById(id: any): Observable<Cliente> {
+    return this.http.get<Cliente>(`${API_CONFIG.baseUrl}/cliente/${id}`);
+  }
+
   create(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(`${API_CONFIG.baseUrl}/cliente/create`, cliente);
   }
 
   update(cliente: Cliente): Observable<Cliente> {
-    return this.http.put<Cliente>(
-      `${API_CONFIG.baseUrl}cliente/${cliente.id}`,
-      cliente
-    );
+    return this.http.put<Cliente>(`${API_CONFIG.baseUrl}/cliente/${cliente.id}`,cliente);
   }
 
   delete(id: any): Observable<Cliente> {
-    return this.http.delete<Cliente>(`${API_CONFIG.baseUrl}cliente/${id}`);
+    return this.http.delete<Cliente>(`${API_CONFIG.baseUrl}/cliente/${id}`);
   }
 }
