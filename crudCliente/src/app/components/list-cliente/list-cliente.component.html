@@ -31,7 +31,7 @@
 
         <ng-container matColumnDef="cpf" style="width: 20%;">
           <th mat-header-cell *matHeaderCellDef>CPF</th>
-          <td mat-cell *matCellDef="let element"> {{element.cpf}} </td>
+          <td mat-cell *matCellDef="let element" mask="CPF_CNPJ"> {{element.cpf}} </td>
         </ng-container>
 
         <ng-container matColumnDef="tel" style="width: 20%;">
@@ -55,7 +55,7 @@
               <a routerLink="editarCliente/{{ element.id }}">
                 <i class="material-icons edit">edit</i>
               </a>
-              <a (click)="delete()">
+              <a routerLink="deleteCliente/{{ element.id }}">
                 <i class="material-icons delete">delete</i>
               </a>
             </td>

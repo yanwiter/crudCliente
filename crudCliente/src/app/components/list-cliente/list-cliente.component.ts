@@ -13,21 +13,6 @@ import { ClienteService } from 'src/app/services/Cliente.Service';
 })
 export class ListClienteComponent implements OnInit {
   ELEMENT_DATA: Cliente[] = [];
-  clienteDelete: Cliente = {
-    id: undefined,
-    nome: undefined,
-    cpf: undefined,
-    bairro: undefined,
-    cidade: undefined,
-    uf: undefined,
-    cep: undefined,
-    logradouro: undefined,
-    complemento: undefined,
-    numero: undefined,
-    tipoTelefone: undefined,
-    telefone: undefined,
-    email: undefined
-  };
 
   displayedColumns: string[] = [
     'nome',
@@ -48,7 +33,6 @@ export class ListClienteComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAll();
-    this.clienteDelete.id = this.route.snapshot.paramMap.get('id');
   }
 
   findAll(): void {
@@ -59,19 +43,4 @@ export class ListClienteComponent implements OnInit {
     });
   }
 
-  delete(): void {
-    this.service.delete(this.clienteDelete.id).subscribe(
-      () => {
-        this.toast.success('Veículo deletado com sucesso', 'Delete');
-        this.router.navigate(['listCliente']);
-      },
-      (ex) => {
-        if (ex.error.errors) {
-            this.toast.error('Opss ');
-        } else {
-          this.toast.error(ex.error.message);
-        }
-      }
-    );
-  }
 }
