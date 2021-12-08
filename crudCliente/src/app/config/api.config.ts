@@ -1,3 +1,3 @@
 export const API_CONFIG = {
-  baseUrl: 'https://',
+  baseUrl: 'https://atividade-crud-client.herokuapp.com'
 };
