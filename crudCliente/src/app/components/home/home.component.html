@@ -26,7 +26,7 @@
     </div>
     <div class="col-auto" style="width: 15%;">
       <label >Nº CPF</label>
-      <input [(ngModel)]="cliente.cpf" placeholder="000.000.000-000" mask="CPF_CNPJ" type="text" class="form-control" id="cpf" />
+      <input [(ngModel)]="cliente.cpf" placeholder="000.000.000-00" mask="CPF_CNPJ" type="text" class="form-control" id="cpf" />
     </div>
     <div class="col-auto" style="width: 25%;">
       <label >E-mail</label>
@@ -41,9 +41,9 @@
             <option value="CELULAR">Celular</option>
           </select>
         </div>
-    <div class="col-auto" style="width: 15%;">
+    <div class="col-auto" style="width: 18%;">
       <label >Nº telefone</label>
-      <input [(ngModel)]="cliente.telefone" placeholder="(00) 00000-0000" [dropSpecialCharacters]="false" prefix="+55 " mask="(00) 00000-0000"
+      <input [(ngModel)]="cliente.telefone" placeholder="(00) 00000-0000" [dropSpecialCharacters]="false" prefix="+55 " mask="(00) 0000-0000 || (00) 0 0000-0000"
         type="text" class="form-control" id="telefone" name="telefone" />
     </div>
   </div>

@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ListClienteComponent } from './components/list-cliente/list-cliente.component';
+import { DeleteClienteComponent } from './components/delete-cliente/delete-cliente.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'listCliente', component: ListClienteComponent },
+  { path: 'listCliente/deleteCliente/:id', component: DeleteClienteComponent}
 ];
 
 @NgModule({
