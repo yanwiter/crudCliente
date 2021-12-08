@@ -33,6 +33,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { DeleteClienteComponent } from './components/delete-cliente/delete-cliente.component';
+import { UpdateClienteComponent } from './components/update-cliente/update-cliente.component';
 
 //export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
@@ -43,6 +44,7 @@ import { DeleteClienteComponent } from './components/delete-cliente/delete-clien
     HomeComponent,
     ListClienteComponent,
     DeleteClienteComponent,
+    UpdateClienteComponent,
   ],
   imports: [
     BrowserModule,

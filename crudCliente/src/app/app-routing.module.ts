@@ -1,3 +1,4 @@
+import { UpdateClienteComponent } from './components/update-cliente/update-cliente.component';
 import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -9,7 +10,8 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'listCliente', component: ListClienteComponent },
-  { path: 'listCliente/deleteCliente/:id', component: DeleteClienteComponent}
+  { path: 'listCliente/deleteCliente/:id', component: DeleteClienteComponent},
+  { path: 'listCliente/updateCliente/:id', component: UpdateClienteComponent},
 ];
 
 @NgModule({
