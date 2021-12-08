@@ -3,7 +3,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { MatDialogModule } from '@angular/material/dialog';
+
+
+import { HttpModule } from '@angular/http';
+import { AuthGuard } from '';
+import { HttpUtilService } from './services/http-util-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +36,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { DeleteClienteComponent } from './components/delete-cliente/delete-cliente.component';
 import { UpdateClienteComponent } from './components/update-cliente/update-cliente.component';
 
@@ -83,7 +88,7 @@ import { UpdateClienteComponent } from './components/update-cliente/update-clien
     NgxMaskModule.forRoot(),
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [AuthGuard, HttpUtilService],//colocar o loginservice
   bootstrap: [AppComponent],
 })
 export class AppModule {}
