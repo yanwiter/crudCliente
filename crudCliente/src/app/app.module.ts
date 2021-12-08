@@ -5,9 +5,6 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 
-import { HttpModule } from '@angular/http';
-import { AuthGuard } from '';
-import { HttpUtilService } from './services/http-util-service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,8 +36,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DeleteClienteComponent } from './components/delete-cliente/delete-cliente.component';
 import { UpdateClienteComponent } from './components/update-cliente/update-cliente.component';
-
 //export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAd4bgJYIsw_1_Ek4zeAjs82vCSSfsDTig",
+  authDomain: "crudclient-f785b.firebaseapp.com",
+  projectId: "crudclient-f785b",
+  storageBucket: "crudclient-f785b.appspot.com",
+  messagingSenderId: "904436725837",
+  appId: "1:904436725837:web:d24ed4a314219d238a8404",
+  measurementId: "${config.measurementId}"
+};
 
 @NgModule({
   declarations: [
@@ -88,7 +94,7 @@ import { UpdateClienteComponent } from './components/update-cliente/update-clien
     NgxMaskModule.forRoot(),
     ToastrModule.forRoot(),
   ],
-  providers: [AuthGuard, HttpUtilService],//colocar o loginservice
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
