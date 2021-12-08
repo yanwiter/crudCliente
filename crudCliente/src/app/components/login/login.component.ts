@@ -11,8 +11,8 @@ import { User } from 'src/app/model/User';
 })
 export class LoginComponent implements OnInit {
 
-  public user: any
-  public senha: any
+  public user: String | undefined
+  public senha: String | undefined
 
 
   constructor(private toast: ToastrService,
